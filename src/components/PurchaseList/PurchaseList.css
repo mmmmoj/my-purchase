@@ -1,0 +1,19 @@
+ul {
+  padding: 0;
+  width: 300px;
+  margin: auto;
+}
+
+li {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.purchaseListContainer {
+  margin-top: 10px;
+}
+
+.purchaseListCaptionContainer {
+  padding-left: 10px;
+}

@@ -1,0 +1,31 @@
+.container {
+    overflow-x: auto;
+    padding: 10px;
+}
+
+caption {
+    font-weight: bold;
+    font-size: 24px;
+    text-align: left;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+    text-align: center;
+    vertical-align: middle;
+}
+
+thead th {
+    width: 14%;
+    border-bottom: 1px solid #ddd;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+th, td {
+    padding: 10px;
+}

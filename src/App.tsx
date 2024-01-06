@@ -1,17 +1,35 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
+import { PurchaseList, PurchaseTable, Pagination, Loading, Alert } from './components';
+import { Purchase } from './types/purchase';
+import { useData } from './hooks/useData';
+import { usePagination } from './hooks/usePagination';
 
 function App() {
+  const { loading, data: list, error, fetchList, resetError } = useData();
+  const { data, onPaginate, activePage, totalPages } = usePagination(list);
+
+  useEffect(() => {
+    fetchList();
+  }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
+      {error && <Alert message={error} onDismiss={resetError} />}
+      <section className="mobileSection" data-testid="mobileSection">
+        <PurchaseList list={data} />
+      </section>
+      <section className="disktopSection" data-testid="disktopSection">
+        <PurchaseTable data={data as Purchase[]} />
+      </section>
+      // List might be long, so break it down to pagination
+      <section className="pagination">
+        <Pagination activePage={activePage} onPaginate={onPaginate} totalPages={totalPages} />
+      </section>
     </div>
   );
 }

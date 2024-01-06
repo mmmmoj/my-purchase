@@ -10,6 +10,7 @@
     "@types/node": "^16.18.69",
     "@types/react": "^18.2.47",
     "@types/react-dom": "^18.2.18",
+    "axios": "^1.6.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -23,12 +24,6 @@
     "eject": "react-scripts eject",
     "eslint": "eslint src/**",
     "prettier": "prettier --write ."
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
@@ -47,8 +42,10 @@
   "author": "Mojahed Elbakre <mmmmoj@hotmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@types/css-mediaquery": "^0.1.4",
     "@typescript-eslint/eslint-plugin": "^6.18.0",
     "@typescript-eslint/parser": "^6.18.0",
+    "css-mediaquery": "^0.1.2",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react": "^7.33.2",

@@ -1,0 +1,57 @@
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: auto;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 5px 15px;
+  display: inline-block;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nameSection {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.name {
+  font-weight: 600;
+  text-align: left;
+  margin-left: 5px;
+  font-size: 0.9rem;
+}
+
+.price {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.description {
+  color: grey;
+  font-size: 0.8rem;
+    text-align: start;
+}
+
+.createdAtLabel {
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+.createdAt {
+  margin-top: 0;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.footer {
+}
+
+.body {
+}
