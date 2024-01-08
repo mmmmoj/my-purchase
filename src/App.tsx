@@ -26,7 +26,6 @@ function App() {
       <section className="disktopSection" data-testid="disktopSection">
         <PurchaseTable data={data as Purchase[]} />
       </section>
-      // List might be long, so break it down to pagination
       <section className="pagination">
         <Pagination activePage={activePage} onPaginate={onPaginate} totalPages={totalPages} />
       </section>

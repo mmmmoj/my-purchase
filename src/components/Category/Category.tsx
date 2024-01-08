@@ -12,8 +12,10 @@ export const Category: FunctionComponent<CategoryProps> = ({ name }) => {
     borderColor: categoryColor(name),
   };
   return (
-    <p className="category" style={style}>
-      {name}
+    <p className="category">
+      <div style={style}>
+        <strong>{name}</strong>
+      </div>
     </p>
   );
 };

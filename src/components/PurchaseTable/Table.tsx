@@ -33,7 +33,7 @@ export const PurchaseTable: FunctionComponent<PurchaseTableProps> = ({ data }) =
           )}
           {data.map((entry) => (
             <tr key={entry.id}>
-              <Cell text={entry.name} alignment="start" />
+              <Cell text={entry.name} alignment="start" isBold />
               <Cell text={entry.location} isImage alt={entry.name} />
               <Cell text={entry.purchaseDate} isDate />
               <Cell text={entry.category} isCategory />

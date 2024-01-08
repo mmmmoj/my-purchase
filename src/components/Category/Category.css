@@ -1,7 +1,12 @@
 .category {
-  border: 1px solid #eee;
   height: 25px;
   margin-top: auto;
   margin-bottom: auto;
   line-height: 25px;
+}
+
+.category div {
+  border: 1px solid #eee;
+  display: inline-block;
+  padding: 5px;
 }

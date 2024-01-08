@@ -12,6 +12,7 @@ export interface TableCellProps {
   isCurrency?: boolean;
   isCategory?: boolean;
   isMenu?: boolean;
+  isBold?: boolean;
   width?: number;
 }
 
@@ -24,21 +25,24 @@ export const Cell: FunctionComponent<TableCellProps> = ({
   isDate,
   isCategory,
   isMenu,
+  isBold,
   alignment,
 }) => {
   let content: any = text;
   if (isImage && typeof text === 'string') {
     content = <ProductImage src={text} alt={alt} />;
   } else if (isCurrency && typeof text === 'number') {
-    content = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(text);
+    content = <strong>{new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(text)}</strong>;
   } else if (isDate && typeof text === 'string') {
     content = format(text);
   } else if (isCategory && typeof text === 'string') {
     content = <Category name={text} />;
   } else if (isMenu) {
     content = <span>&#8942;</span>;
+  } else if (isBold) {
+    content = <strong>{text}</strong>;
   }
-  const style: any = { fontWeight: 600 };
+  const style: any = {};
   if (width) {
     style.maxWidth = width;
   }
